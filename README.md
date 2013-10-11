@@ -8,7 +8,7 @@ There are two modes:
 * angular-mode
 * angular-html-mode
 
-*angular-mode provides* font-lock syntax highlighting for JavaScript
+*angular-mode* provides font-lock syntax highlighting for JavaScript
 files and is derived from js-mode.
 
 *angular-html-mode* provides font-lock syntax highlighting for HTML
