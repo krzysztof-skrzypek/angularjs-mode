@@ -85,12 +85,22 @@
     "$timeout"
     "$window"))
 
+(defvar angular-mocha-keywords
+  '(
+    "describe("
+    "beforeEach("
+    "before("
+    "afterEach("
+    "it("
+))
+
 (defvar angular-font-lock-keywords
   `(
     (,(regexp-opt angular-global-api-keywords) . font-lock-builtin-face)
     (,(regexp-opt angular-services-keywords) . font-lock-constant-face)
     (,(regexp-opt angular-controller-definition-keywords) . font-lock-keyword-face)
     (,(regexp-opt angular-directive-definition-keywords) . font-lock-keyword-face)
+    (,(regexp-opt angular-mocha-keywords) . font-lock-type-face)
     ))
 
 (define-derived-mode angular-mode javascript-mode
