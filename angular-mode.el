@@ -62,7 +62,22 @@
       ".directive"
       ".controller"
       ".service"
-      ".factory"))
+      ".factory"
+      ;; rootScope.Scope keywords, https://docs.angularjs.org/api/ng/type/$rootScope.Scope
+      "$new"
+      "$watch"
+      "$watchGroup"
+      "$watchCollection"
+      "$digest"
+      "$destroy"
+      "$eval"
+      "$evalAsync"
+      "$apply"
+      "$on"
+      "$emit"
+      "$broadcast"
+      "$id"
+))
 
 (defvar angular-services-keywords
   `("$anchorScroll"
