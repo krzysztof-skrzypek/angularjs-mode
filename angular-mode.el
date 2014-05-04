@@ -17,10 +17,20 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-(defvar angular-font-lock-keywords
-  (list
-   ;; global api
-   (regexp-opt
+(require 'cl)
+
+(defvar angular-controller-definition-keywords
+  '())
+
+(defvar angular-directive-definition-keywords
+  '("controller:"
+    "controllerAs:"
+    "link:"
+    "scope:"
+    "templateUrl:"
+    "transclude:"))
+
+(defvar angular-global-api-keywords
     '("angular.bind"
       "angular.bootstrap"
       "angular.copy"
@@ -48,38 +58,45 @@
       "angular.noop"
       "angular.toJson"
       "angular.uppercase"
-      "angular.version"))
-   ;; services
-   "$anchorScroll"
-   "$animate"
-   "$cacheFactory"
-   "$compile"
-   "$controller"
-   "$document"
-   "$exceptionHandler"
-   "$filter"
-   (regexp-opt '("$http" "$httpBackend"))
-   (regexp-opt '("$interpolate" "$interval"))
-   (regexp-opt '("$locale" "$location"))
-   "$log"
-   "$parse"
-   "$q"
-   (regexp-opt '("rootElement" "rootScope"))
-   (regexp-opt '("sce" "sceDelegate"))
-   "$templateCache"
-   "$timeout"
-   "$window"
-   ;; controllers
-   "$scope"
-))
+      "angular.version"
+      ".directive"
+      ".controller"
+      ".service"
+      ".factory"))
 
-(define-derived-mode angular-mode
-  javascript-mode
+(defvar angular-services-keywords
+  `("$anchorScroll"
+    "$animate"
+    "$cacheFactory"
+    "$compile"
+    "$controller"
+    "$document"
+    "$exceptionHandler"
+    "$filter"
+    ,(regexp-opt '("$http" "$httpBackend"))
+    ,(regexp-opt '("$interpolate" "$interval"))
+    ,(regexp-opt '("$locale" "$location"))
+    "$log"
+    "$parse"
+    "$q"
+    ,(regexp-opt '("rootElement" "rootScope"))
+    ,(regexp-opt '("sce" "sceDelegate"))
+    "$templateCache"
+    "$timeout"
+    "$window"))
+
+(defvar angular-font-lock-keywords
+  `(
+    (,(regexp-opt angular-global-api-keywords) . font-lock-builtin-face)
+    (,(regexp-opt angular-services-keywords) . font-lock-constant-face)
+    (,(regexp-opt angular-controller-definition-keywords) . font-lock-keyword-face)
+    (,(regexp-opt angular-directive-definition-keywords) . font-lock-keyword-face)
+    ))
+
+(define-derived-mode angular-mode javascript-mode
   "JavaScript[Angular]"
   "Major mode for AngularJS.
 \\{javascript-mode-map}"
-  (setq font-lock-defaults (list
-                            (cons 'angular-font-lock-keywords
-                                  js--font-lock-keywords))))
+  (font-lock-add-keywords nil angular-font-lock-keywords))
 
 (provide 'angular-mode)
