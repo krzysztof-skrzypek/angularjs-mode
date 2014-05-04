@@ -73,14 +73,19 @@
     "$document"
     "$exceptionHandler"
     "$filter"
-    ,(regexp-opt '("$http" "$httpBackend"))
-    ,(regexp-opt '("$interpolate" "$interval"))
-    ,(regexp-opt '("$locale" "$location"))
+    "$http"
+    "$httpBackend"
+    "$interpolate"
+    "$interval"
+    "$locale"
+    "$location"
     "$log"
     "$parse"
     "$q"
-    ,(regexp-opt '("rootElement" "rootScope"))
-    ,(regexp-opt '("sce" "sceDelegate"))
+    "rootElement"
+    "rootScope"
+    "sce"
+    "sceDelegate"
     "$templateCache"
     "$timeout"
     "$window"))
