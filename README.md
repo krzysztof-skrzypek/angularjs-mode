@@ -17,6 +17,18 @@ templates and is derived from html-mode.
 In the future there should be a speedbar minor mode that lists
 controllers, directives, services and filters defined in a file.
 
+## YASnippets, Code Snippet Expanding
+
+For both angular-mode and angular-html-mode, there are snippets
+defined for [YASnippet](http://emacswiki.org/emacs/Yasnippet) in the
+`snippets` directory.
+
+You can load the snippets like this:
+
+    (add-to-list 'yas-snippet-dirs "/path/to/angularjs-mode/snippets")
+
+[![Using YASnippet for AngularJS](https://img.youtube.com/vi/GniuRBlfPsw/0.jpg)](https://www.youtube.com/watch?v=GniuRBlfPsw)
+
 # Copyright and License
 
 Copyright (C) 2013 Rudolf Olah <omouse@gmail.com>
