@@ -29,6 +29,18 @@ You can load the snippets like this:
 
 [![Using YASnippet for AngularJS](https://img.youtube.com/vi/GniuRBlfPsw/0.jpg)](https://www.youtube.com/watch?v=GniuRBlfPsw)
 
+## Auto-Complete (Tab Completion)
+
+For both angular-mode and angular-html-mode, there are dictionaries
+defined for [Auto-Complete](http://auto-complete.org/) in the
+`ac-dict` directory.
+
+You can load the auto-complete dictionaries like this:
+
+    (add-to-list 'ac-dictionary-directories "/path/to/angularjs-mode/ac-dict")
+    (add-to-list 'ac-modes 'angular-mode)
+    (add-to-list 'ac-modes 'angular-html-mode)
+
 # Copyright and License
 
 Copyright (C) 2013-2015 Rudolf Olah <omouse@gmail.com>
