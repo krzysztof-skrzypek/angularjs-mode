@@ -31,7 +31,7 @@ You can load the snippets like this:
 
 # Copyright and License
 
-Copyright (C) 2013 Rudolf Olah <omouse@gmail.com>
+Copyright (C) 2013-2015 Rudolf Olah <omouse@gmail.com>
 
 Licensed under the GNU GPL version 3 or later, see LICENSE for the
 full text of the license.
