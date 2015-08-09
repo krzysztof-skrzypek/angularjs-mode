@@ -1,4 +1,4 @@
-;; angular-mode.el
+;; angular-mode.el --- Major mode for Angular.js
 
 ;; Angular Mode is based on JavaScript mode. It adds keyword
 ;; highlighting for important functions that are part of core
@@ -16,6 +16,9 @@
 ;; GNU General Public License for more details.
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+;;; Code:
 
 (require 'cl)
 
@@ -130,3 +133,4 @@
   (font-lock-add-keywords nil angular-font-lock-keywords))
 
 (provide 'angular-mode)
+;;; angular-mode.el ends here
