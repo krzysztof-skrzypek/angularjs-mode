@@ -1,4 +1,4 @@
-;; angular-html-mode.el
+;; angular-html-mode.el --- Major mode for Angular.js HTML file
 
 ;; Angular HTML Mode is based on HTML mode. It adds keyword
 ;; highlighting for directives that are part of core AngularJS.
@@ -15,6 +15,9 @@
 ;; GNU General Public License for more details.
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+;;; Code:
 
 (defvar angular-html-font-lock-keywords
   (list
@@ -78,6 +81,10 @@
   "Major HTML mode for AngularJS.
 \\{html-mode-map}"
 
+  (defvar sgml-font-lock-keywords)
+  (defvar sgml-font-lock-keywords-1)
+  (defvar sgml-font-lock-keywords-2)
+
   (setq font-lock-defaults (list
                             (append sgml-font-lock-keywords
                                     sgml-font-lock-keywords-1
@@ -85,3 +92,4 @@
                                     angular-html-font-lock-keywords))))
 
 (provide 'angular-html-mode)
+;;; angular-html-mode.el ends here
