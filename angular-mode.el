@@ -126,6 +126,7 @@
     (,(regexp-opt angular-mocha-keywords) . font-lock-type-face)
     ))
 
+;;;###autoload
 (define-derived-mode angular-mode javascript-mode
   "JavaScript[Angular]"
   "Major mode for AngularJS.
