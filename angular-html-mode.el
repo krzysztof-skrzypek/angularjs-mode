@@ -75,6 +75,7 @@
    "{{.+?}}" ; angular expressions
 ))
 
+;;;###autoload
 (define-derived-mode angular-html-mode
   html-mode
   "HTML[Angular]"
