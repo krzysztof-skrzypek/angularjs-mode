@@ -32,7 +32,6 @@
 
 ;;; Code:
 
-(require 'cl)
 (defgroup angular nil
   "Major mode for AngularJS."
   :prefix "angular-"
