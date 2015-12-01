@@ -1,26 +1,43 @@
 ;;; angular-mode.el --- Major mode for Angular.js
 
+;; Copyright (C) 2013-2015 Rudolf Olah
+
+;; Author: Rudolf Olah <omouse@gmail.com>
+
+;; This file is not part of GNU Emacs.
+
+;; URL: https://github.com/omouse/angularjs-mode
+;; Keywords: languages javascript
+
+;;; Commentary:
+
 ;; Angular Mode is based on JavaScript mode. It adds keyword
 ;; highlighting for important functions that are part of core
 ;; AngularJS.
 
-;; Copyright (C) 2013 Rudolf Olah <omouse@gmail.com>
+;;; License:
 
-;; This program is free software: you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-;; GNU General Public License for more details.
+;; This program is free software: you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation, either version 3 of the
+;; License, or (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+;; General Public License for more details.
+
 ;; You should have received a copy of the GNU General Public License
-;; along with this program. If not, see <http://www.gnu.org/licenses/>.
+;; along with this file. If not, see <http://www.gnu.org/licenses/>.
 
-;;; Commentary:
 ;;; Code:
 
-(require 'cl)
+(defgroup angular nil
+  "Major mode for AngularJS."
+  :prefix "angular-"
+  :group 'languages
+  :link '(url-link :tag "Github" "https://github.com/omouse/angularjs-mode")
+  :link '(emacs-commentary-link :tag "Commentary" "angular-mode"))
 
 (defvar angular-controller-definition-keywords
   '())
