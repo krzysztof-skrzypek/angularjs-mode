@@ -49,3 +49,5 @@ Copyright (C) 2013-2015 Rudolf Olah <omouse@gmail.com>
 
 Licensed under the GNU GPL version 3 or later, see LICENSE for the
 full text of the license.
+
+angular-snippets.el is licensed under the GNU GPL version 3 or later and is copyright of Magnar Sveen <magnars@gmail.com>
