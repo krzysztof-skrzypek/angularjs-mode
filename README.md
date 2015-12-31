@@ -3,8 +3,7 @@
 [![MELPA](http://melpa.org/packages/angularjs-mode-badge.svg)](http://melpa.org/#/angularjs-mode)
 [![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 
-If you're looking for snippets, check out
-[angularjs-snippets](https://github.com/magnars/angular-snippets.el).
+Additional snippets from [angularjs-snippets](https://github.com/magnars/angular-snippets.el) are now *included* with angularjs-mode.
 
 There are two modes:
 
